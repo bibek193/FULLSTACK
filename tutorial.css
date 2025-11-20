@@ -1,4 +1,4 @@
-/* Basic Reset and Font Setup */
+
 * {
   margin: 0;
   padding: 0;
@@ -6,14 +6,14 @@
   font-family: "Poppins", sans-serif;
 }
 
-/* Body Styling */
+
 body {
   background: linear-gradient(135deg, #89f7fe, #66a6ff);
   color: #333;
   line-height: 1.6;
 }
 
-/* Header Section */
+
 header {
   text-align: center;
   padding: 80px 20px;
@@ -28,7 +28,7 @@ header h1 {
   margin-bottom: 10px;
 }
 
-/* Navigation Bar */
+
 nav {
   background-color: white;
   padding: 15px 0;
@@ -59,7 +59,7 @@ nav ul li a:hover {
   color: #667eea;
 }
 
-/* Section Styling */
+
 section {
   padding: 50px 20px;
   max-width: 900px;
@@ -76,7 +76,7 @@ h2 {
   margin-bottom: 20px;
 }
 
-/* Projects Section */
+
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -96,7 +96,7 @@ h2 {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Contact Section */
+
 #contact a {
   color: #333;
   text-decoration: none;
@@ -107,7 +107,7 @@ h2 {
   color: #667eea;
 }
 
-/* Footer */
+
 footer {
   text-align: center;
   background: #333;
