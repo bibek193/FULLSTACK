@@ -1,65 +1,194 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bibek Kamat —  Portfolio</title>
+  <meta name="description" content="Hi, I’m Bibek—a motivated developer who loves building clean, functional applications. I work with Java, Python, JavaScript, HTML/CSS, and MySQL, and enjoy creating smooth user experiences from design to backend logic. Always learning, always improving" />
   <link rel="stylesheet" href="tutorial.css">
 </head>
 <body>
 
-  <!-- Header Section -->
-  <header id="home">
-    <h1>Hi, I'm Bibek Kamat 👋</h1>
-    <p>Web Developer | Student | Tech Enthusiast</p>
-  </header>
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand">Bibek Kamat - Portfolio</div>
 
-  <!-- Navigation Menu -->
-  <nav>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- About Section -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Hello! I'm a beginner web developer who enjoys creating beautiful and simple websites using HTML, CSS, and JavaScript. I love learning new things every day and improving my skills step by step.</p>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects">
-    <h2>My Projects</h2>
-    <div class="projects">
-      <div class="card">
-        <h3>🌤️ Weather App</h3>
-        <p>A weather forecast app built using HTML, CSS, and JavaScript.</p>
-      </div>
-      <div class="card">
-        <h3>🏦 Banking System</h3>
-        <p>A simple Java Swing-based banking system that handles deposits and withdrawals.</p>
-      </div>
-      <div class="card">
-        <h3>🎮 Gamified Learning</h3>
-        <p>A research project exploring how gamification helps improve classroom learning.</p>
+      <div class="top-actions">
+        <!-- local PDF path (uploaded file) -->
+        <button id="openSpec" class="btn-outline" title="Open Week02 PDF">Week02 Spec</button>
+        <button id="themeToggle" class="btn-ghost" title="Toggle theme">🌓</button>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <p>📧 Email: <a href="mailto:bibekkamat@email.com">bibekkamat@email.com</a></p>
-    <p>🌐 GitHub: <a href="https://github.com/">github.com/bibekkamat</a></p>
-  </section>
+  <!-- HERO (gradient chosen: AF4F2E -> E9B48A) -->
+  <header class="hero" id="home">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <h1>Bibek Kamat</h1>
+        <p class="muted"></p>
+        <div class="hero-ctas">
+          <button class="btn-primary" onclick="scrollToId('projects')">View Projects</button>
+          <button class="btn-secondary" onclick="scrollToId('contact')">Contact</button>
+        </div>
+      </div>
+      <div class="hero-image">
+        <!-- Replace avatar.jpg with your image -->
+        <img src="bibek.jpg" alt="Profile avatar">
+      </div>
+    </div>
+  </header>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Bibek Kamat | Made with ❤️ using HTML & CSS</p>
+  <!-- NAV -->
+  <nav class="nav-card" aria-label="Main navigation">
+    <div class="container">
+      <ul class="nav-list">
+        <li tabindex="0" onclick="scrollToId('home')">Home</li>
+        <li tabindex="0" onclick="scrollToId('about')">About</li>
+        <li tabindex="0" onclick="scrollToId('skills')">Skills</li>
+        <li tabindex="0" onclick="scrollToId('projects')">Projects</li>
+        <li tabindex="0" onclick="scrollToId('media')">Media</li>
+        <li tabindex="0" onclick="scrollToId('contact')">Contact</li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+
+    <!-- ABOUT -->
+    <section id="about" class="card">
+      <h2>About</h2>
+      <div class="card-row about-row">
+        <div class="about-avatar">
+          <img src="bibekk.jpg" alt="Profile photo" style="display: block; margin: 0 auto;">
+        </div>
+        <div class="about-text">
+          <p class="muted">Hi, I’m Bibek—a motivated developer who loves building clean, functional applications. I work with Java, Python, JavaScript, HTML/CSS, and MySQL, and enjoy creating smooth user experiences from design to backend logic. Always learning, always improving.</p>
+          <p><strong>Location:</strong> Biratnagar, Nepal • <strong>Interests:</strong> Web Dev, Java, UI, Python</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="card">
+      <h2>Skills</h2>
+      <div class="grid skills-grid">
+        <div class="skill">
+          <div class="skill-name">HTML</div>
+          <div class="skill-track" data-value="95"><div class="skill-fill"></div></div>
+        </div>
+        <div class="skill">
+          <div class="skill-name">CSS</div>
+          <div class="skill-track" data-value="90"><div class="skill-fill"></div></div>
+        </div>
+        <div class="skill">
+          <div class="skill-name">JavaScript</div>
+          <div class="skill-track" data-value="80"><div class="skill-fill"></div></div>
+        </div>
+        <div class="skill">
+          <div class="skill-name">Java</div>
+          <div class="skill-track" data-value="70"><div class="skill-fill"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="card">
+      <h2>Projects</h2>
+      <div class="grid projects-grid" role="list">
+        <div class="project" role="listitem" tabindex="0" onclick="openProject('file:///C:/internet%20software/weatherAPP/index.html')">
+          <img src="image.png" alt="Weather App">
+          <h3>Weather App</h3>
+          <p class="muted">HTML • CSS • JS</p>
+        </div>
+
+        <div class="project" role="listitem" tabindex="0" onclick="openProject('https://your-live-banking.example')">
+          <img src="Java.png" alt="Banking System">
+          <h3>Banking System</h3>
+          <p class="muted">Java Swing demo</p>
+        </div>
+
+        <div class="project" role="listitem" tabindex="0" onclick="openProject('https://your-gamification-project.example')">
+          <img src="Screenshot 2025-05-19 175459.png" alt="Gamified Learning">
+          <h3>Gamified Learning</h3>
+          <p class="muted">Report + 3d Gamified</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MEDIA -->
+    <section id="media" class="card">
+      <h2>Media</h2>
+
+      <div class="card-row media-row">
+        <div class="media-box">
+          <label class="muted">Video</label>
+          <video controls width="420" src="RCB_2025.mp4"></video>
+        </div>
+
+        <div class="media-box">
+          <label class="muted">Audio</label>
+          <audio controls src="GOD_Plan.mp4"></audio>
+        </div>
+
+        <div class="media-box">
+          <label class="muted">Canvas</label>
+          <canvas id="demoCanvas" width="320" height="160"></canvas>
+          <div style="margin-top:8px"><button class="btn-outline" onclick="drawCanvas()">Draw</button></div>
+        </div>
+      </div>
+
+      <!-- SLIDER -->
+      <div class="slider">
+        <div class="slides" id="slides">
+          <img src="IMG20241024105420.jpg" alt="slide 1">
+          <img src="Kanyam.JPG" alt="slide 2">
+          <img src="Changulake.JPG" alt="slide 3">
+        </div>
+        <div class="slider-controls">
+          <button class="btn-ghost" onclick="prevSlide()">◀</button>
+          <button class="btn-ghost" onclick="nextSlide()">▶</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="card">
+      <h2>Contact</h2>
+
+      <form id="contactForm" novalidate>
+        <input id="cname" type="text" placeholder="Your name" required minlength="2">
+        <input id="cemail" type="email" placeholder="Your email" required>
+        <textarea id="cmessage" rows="4" placeholder="Your message" required minlength="5"></textarea>
+
+        <div class="form-actions">
+          <button type="submit" class="btn-primary">Send</button>
+          <button type="reset" class="btn-outline" onclick="resetFeedback()">Reset</button>
+        </div>
+
+        <div id="formFeedback" class="muted" aria-live="polite"></div>
+      </form>
+
+      <div id="detailsCard" class="details-card" style="display:none; margin-top:14px;">
+        <h4>Saved Contact</h4>
+        <div id="detailsContent" class="muted"></div>
+        <div style="margin-top:10px;">
+          <button class="btn-outline" onclick="clearContact()">Clear</button>
+          <button class="btn-ghost" onclick="showForm()">Back to Form</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- BACK TO TOP -->
+  <button id="backTop" title="Back to top">⬆</button>
+
+  <footer class="footer container">
+    <small class="muted">© 2025 Bibek Kamat </small>
   </footer>
 
+  <script src="tutorial.js"></script>
 </body>
 </html>
